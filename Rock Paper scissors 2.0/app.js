@@ -20,11 +20,11 @@ const game = () => {
     const options = document.querySelectorAll(".options button");
     const playerHand = document.querySelector(".player-hand");
     const computerHand = document.querySelector(".computer-hand");
-    const hands = document.querySelectorAll('hands img');
+    const hands = document.querySelectorAll('.hands img');
 
     hands.forEach(hand => {
-        hand.addEventListener('animationend', function(){
-            this.style.animation = "";
+        hand.addEventListener("animationend", function() {
+          this.style.animation = "";
         });
     });
     //Computer Options
@@ -39,8 +39,8 @@ const game = () => {
                 //Here is where we call compare hands
                 compareHands(this.textContent, computerChoise);
                 //Update Images
-                playerHand.src = `./assests/${this.textContent}.png`;
-                computerHand.src = `/assets/${computerChoise}.png`;
+                playerHand.src = `./assets/${this.textContent}.png`;
+                computerHand.src = `./assets/${computerChoise}.png`;
             }, 2000)
 
             //Animation
